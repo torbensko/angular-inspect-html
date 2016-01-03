@@ -1,0 +1,32 @@
+{
+  "name": "angular-view-html",
+  "description": "View the HTML of a given page element",
+  "main": "angular-view-html.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torbensko/angular-view-html.git"
+  },
+  "keywords": [
+    "view",
+    "html",
+    "inspect"
+  ],
+  "author": "Torben Sko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/torbensko/angular-view-html/issues"
+  },
+  "homepage": "https://github.com/torbensko/angular-view-html#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-compass": "^1.0.4",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

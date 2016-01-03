@@ -1,0 +1,18 @@
+/* line 1, ../scss/angular-view-html.scss */
+.view-html,
+[view-html] {
+  position: relative;
+}
+/* line 5, ../scss/angular-view-html.scss */
+.view-html:hover::after,
+[view-html]:hover::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '<>';
+  padding: 5px 10px;
+  color: white;
+  font-size: 12pt;
+  font-weight: 600;
+  background-color: purple;
+}
