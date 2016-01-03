@@ -2,7 +2,7 @@
   "name": "angular-view-html",
   "main": [
     "angular-view-html.js",
-    "angular-view-html.css"
+    "scss/angular-view-html.scss"
   ],
   "authors": [
     "Torben Sko <torben.sko@gmail.com>"
@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "angular": "~1.4.8",
-    "angular-bootstrap": "~0.14.3"
+    "angular-bootstrap": "~0.14.3",
+    "js-beautify": "~1.5.10"
   }
 }

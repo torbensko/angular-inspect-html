@@ -2,42 +2,34 @@
 
 angular.module('sko.viewHtml', ['ngLodash'])
   .directive('viewHtml', function ($uibModal, lodash) {
-    
-    function removeLeadingWhiteSpace(text) {
-      var lines = text.split(/[\n\r]+/),
-          whiteSpaceLength = 100;
-
-      console.log(text);
-
-      // How much leading whitespace is there?
-      angular.forEach(lines, function(line) { 
-        // Ignore blank lines
-        if ( line.match(/^\s*$/) ) { return; }
-        whiteSpaceLength = Math.min(whiteSpaceLength, line.match(/^\s*/)[0].length);
-      });
-      
-      // Remove common whitespace
-      var trimmed = '';
-      angular.forEach(lines, function(line) { 
-        trimmed += line.substr(whiteSpaceLength)+'\n';
-      });
-
-      return trimmed;
-    }
 
     return {
-      restrict: 'C',
+      restrict: 'A',
       link: function postLink(scope, element, attrs) {
       	element.on('click', function() {
-      		var text = element[0].outerHTML.replace(/\t/g, '  ').replace(/\s*$/g, '');
-          text = removeLeadingWhiteSpace(text);
+
+          var formatted = html_beautify(element[0].outerHTML, {
+            'indent_inner_html': false,
+            'indent_size': 2,
+            'indent_char': ' ',
+            'wrap_line_length': 78,
+            'brace_style': 'expand',
+            'unformatted': ['a', 'sub', 'sup', 'b', 'i', 'u'],
+            'preserve_newlines': true,
+            'max_preserve_newlines': 5,
+            'indent_handlebars': false,
+            'extra_liners': ['/html']
+          });
+
+          // Remove this directive from the HTML code
+          formatted = formatted.replace(' view-html=""', '');
 
       		$uibModal.open({
       			size: 'lg',
 			      template: 
                 '<div class="modal-body">'+
                   '<pre>'+
-                    lodash.escape(text)+
+                    lodash.escape(formatted)+
                   '</pre>'+
                 '</div>',
 			    });

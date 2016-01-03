@@ -1,10 +1,8 @@
 /* line 1, ../scss/angular-view-html.scss */
-.view-html,
 [view-html] {
   position: relative;
 }
-/* line 5, ../scss/angular-view-html.scss */
-.view-html:hover::after,
+/* line 4, ../scss/angular-view-html.scss */
 [view-html]:hover::after {
   position: absolute;
   top: 0;
