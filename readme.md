@@ -1,7 +1,7 @@
-# Angular GitHub readme directive
+# View HTML Angular directive
 
-View the HTML for a given page element in a modal. 
-Ideal for theming and sample pages.
+View the HTML for a given page element. Helps support code reuse and consistent
+formatting. Ideal for theming and sample pages. 
 
 Inspired by the [Bootswatch](http://bootswatch.com/) theming website.
 
