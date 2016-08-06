@@ -1,40 +1,43 @@
-# View HTML Angular directive
+# Inspect HTML Angular directive
 
-View the HTML for a given page element. Helps support code reuse and consistent
-formatting. Ideal for theming and sample pages. 
+View the HTML for a page element, making it easier to reuse HTML examples.
 
 Inspired by the [Bootswatch](http://bootswatch.com/) theming website.
 
 
 
-# Usage
+## Usage
 
-Add `view-html` to the element you want to reveal the HTML of:
+- Install via bower:
+	```
+  bower install torbensko/angular-inspect-html --save
+  ```
 
-    <div view-html>
-      <div>reusable html component</div>
-    </div>
+- Import the module `sko.inspectHtml`
 
+- Add `inspect-html` to the element you want to reveal the HTML of, e.g.
 
-
-# Install
-
-Installing via bower:
-
-    bower install torbensko/angular-view-html
+	```
+  <div inspect-html>
+    <div>reusable html component</div>
+  </div>
+  ```
 
 
 ## Development
 
-Install
+- Install
+	```
+	npm install
+	bower install
+	```
 
-    npm install
-    bower install
+- Build the CSS
+	```
+	grunt
+	```
 
-Build the CSS
-
-    grunt
-
-Run server
-
-    node server.js
+- Run server - requires Python.
+	```
+	./run.sh
+	```

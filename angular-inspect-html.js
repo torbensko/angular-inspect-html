@@ -1,8 +1,10 @@
 'use strict';
 
-angular.module('sko.viewHtml', ['ngLodash'])
-  .directive('viewHtml', function ($uibModal, lodash) {
-
+angular.module('sko.inspectHtml', [
+    'ngLodash',
+    'ui.bootstrap',
+  ])
+  .directive('inspectHtml', function ($uibModal, lodash) {
     return {
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
@@ -22,7 +24,7 @@ angular.module('sko.viewHtml', ['ngLodash'])
           });
 
           // Remove this directive from the HTML code
-          formatted = formatted.replace(' view-html=""', '');
+          formatted = formatted.replace(' inspect-html=""', '');
 
       		$uibModal.open({
       			size: 'lg',

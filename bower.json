@@ -1,8 +1,8 @@
 {
-  "name": "angular-view-html",
+  "name": "angular-inspect-html",
   "main": [
-    "angular-view-html.js",
-    "scss/angular-view-html.scss"
+    "angular-inspect-html.js",
+    "scss/main.scss"
   ],
   "authors": [
     "Torben Sko <torben.sko@gmail.com>"

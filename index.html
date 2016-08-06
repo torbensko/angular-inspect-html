@@ -3,13 +3,13 @@
   <head>
     <title></title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/angular-view-html.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
   </head>
   <body ng-app="DemoApp">
 
     <div class="container">
 
-      <div class="panel panel-primary" view-html>
+      <div class="panel panel-primary" inspect-html>
         <div class="panel-heading">
           <h3 class="panel-title">Panel primary</h3>
         </div>
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div class="panel panel-success" view-html>
+      <div class="panel panel-success" inspect-html>
         <div class="panel-heading" >
           <h3 class="panel-title">Panel success</h3>
         </div>
@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div class="panel panel-warning" view-html>
+      <div class="panel panel-warning" inspect-html>
         <div class="panel-heading">
           <h3 class="panel-title">Panel warning</h3>
         </div>
@@ -42,9 +42,9 @@
     <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
     <script src="bower_components/js-beautify/js/lib/beautify-html.js"></script>
 
-    <script src="angular-view-html.js"></script>
+    <script src="angular-inspect-html.js"></script>
     <script>
-      angular.module('DemoApp', ['sko.viewHtml', 'ui.bootstrap']);
+      angular.module('DemoApp', ['sko.inspectHtml']);
     </script>
   </body>
 </html>
